@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BILO: стоматологія</title>
+  <meta name="description" content="BILO: стоматологічна клініка. Лікування, імпланти, вирівнювання й відбілювання з чесними цінами.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="importmap">
+    { "imports": { "three": "./vendor/three/three.module.js" } }
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <a class="nav__logo" href="#top">bilo</a>
+    <nav class="nav__links">
+      <a href="#prices" data-i18n="nav.prices"></a>
+      <a href="#doctors" data-i18n="nav.doctors"></a>
+      <a href="#book" data-i18n="nav.book"></a>
+    </nav>
+    <div class="nav__lang" role="group" aria-label="Language">
+      <button type="button" data-lang="uk">UA</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="scene">
+      <div class="scene__pin">
+        <h1 class="word" data-i18n="hero.word"></h1>
+        <canvas class="stage" aria-hidden="true"></canvas>
+        <div class="frame" aria-hidden="true"></div>
+
+        <div class="intro">
+          <p class="intro__tagline" data-i18n="hero.tagline"></p>
+          <div class="intro__side">
+            <p data-i18n="hero.text"></p>
+            <a class="btn" href="#book" data-i18n="hero.cta"></a>
+          </div>
+        </div>
+
+        <article class="panel">
+          <h2 data-i18n="story.a.title"></h2>
+          <p data-i18n="story.a.text"></p>
+        </article>
+        <article class="panel">
+          <h2 data-i18n="story.b.title"></h2>
+          <p data-i18n="story.b.text"></p>
+        </article>
+        <article class="panel">
+          <h2 data-i18n="story.c.title"></h2>
+          <p data-i18n="story.c.text"></p>
+        </article>
+
+        <div class="labels" aria-hidden="true">
+          <span class="label" data-anchor="enamel" data-i18n="label.enamel"></span>
+          <span class="label" data-anchor="dentin" data-i18n="label.dentin"></span>
+          <span class="label" data-anchor="pulp" data-i18n="label.pulp"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="treat">
+      <h2 data-i18n="treat.title"></h2>
+      <div class="treat__list">
+        <figure><img src="assets/img/D-01.webp" alt="" loading="lazy"><figcaption><strong data-i18n="treat.a.name"></strong><span data-i18n="treat.a.text"></span></figcaption></figure>
+        <figure><img src="assets/img/D-08.webp" alt="" loading="lazy"><figcaption><strong data-i18n="treat.b.name"></strong><span data-i18n="treat.b.text"></span></figcaption></figure>
+        <figure><img src="assets/img/D-10.webp" alt="" loading="lazy"><figcaption><strong data-i18n="treat.c.name"></strong><span data-i18n="treat.c.text"></span></figcaption></figure>
+        <figure><img src="assets/img/D-09.webp" alt="" loading="lazy"><figcaption><strong data-i18n="treat.d.name"></strong><span data-i18n="treat.d.text"></span></figcaption></figure>
+      </div>
+    </section>
+
+    <section class="prices" id="prices">
+      <h2 data-i18n="prices.title"></h2>
+      <p class="prices__note" data-i18n="prices.note"></p>
+      <ul class="prices__list">
+        <li><span data-i18n="price.1.name"></span><b data-i18n="price.1.value"></b></li>
+        <li><span data-i18n="price.2.name"></span><b data-i18n="price.2.value"></b></li>
+        <li><span data-i18n="price.3.name"></span><b data-i18n="price.3.value"></b></li>
+        <li><span data-i18n="price.4.name"></span><b data-i18n="price.4.value"></b></li>
+        <li><span data-i18n="price.5.name"></span><b data-i18n="price.5.value"></b></li>
+        <li><span data-i18n="price.6.name"></span><b data-i18n="price.6.value"></b></li>
+      </ul>
+    </section>
+
+    <section class="clinic">
+      <figure class="clinic__wide"><img src="assets/img/D-05.webp" data-i18n-alt="clinic.a.alt" loading="lazy"></figure>
+      <div class="clinic__text">
+        <h2 data-i18n="clinic.title"></h2>
+        <p data-i18n="clinic.text"></p>
+      </div>
+      <figure class="clinic__room"><img src="assets/img/D-04.webp" data-i18n-alt="clinic.b.alt" loading="lazy"></figure>
+    </section>
+
+    <section class="doctors" id="doctors">
+      <h2 data-i18n="doctors.title"></h2>
+      <div class="doctors__list">
+        <figure class="doctor">
+          <div class="doctor__pic"><img src="assets/img/D-06.webp" data-i18n-alt="doc.1.name" loading="lazy"></div>
+          <figcaption>
+            <strong data-i18n="doc.1.name"></strong>
+            <span data-i18n="doc.1.role"></span>
+          </figcaption>
+        </figure>
+        <figure class="doctor">
+          <div class="doctor__pic"><img src="assets/img/D-07.webp" data-i18n-alt="doc.2.name" loading="lazy"></div>
+          <figcaption>
+            <strong data-i18n="doc.2.name"></strong>
+            <span data-i18n="doc.2.role"></span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Remove "hidden" once the clinic has its own before/after photos, as cases/1-before.webp and cases/1-after.webp.
+         Only use real patients' photos, with their written consent. -->
+    <section class="cases" hidden>
+      <h2 data-i18n="cases.title"></h2>
+      <div class="compare">
+        <div class="compare__side compare__before" data-i18n="cases.before"></div>
+        <div class="compare__side compare__after" data-i18n="cases.after"></div>
+        <input class="compare__range" type="range" min="0" max="100" value="50" data-i18n-label="cases.range">
+      </div>
+    </section>
+
+    <section class="book" id="book">
+      <div>
+        <h2 data-i18n="book.title"></h2>
+        <p data-i18n="book.text"></p>
+        <img class="book__smile" src="assets/img/D-03.webp" data-i18n-alt="book.alt" loading="lazy">
+      </div>
+      <form class="form">
+        <label><span data-i18n="form.name"></span><input name="name" type="text" autocomplete="name" required></label>
+        <label><span data-i18n="form.phone"></span><input name="phone" type="tel" autocomplete="tel" required></label>
+        <label><span data-i18n="form.service"></span>
+          <select name="service">
+            <option data-i18n="price.1.name"></option>
+            <option data-i18n="price.2.name"></option>
+            <option data-i18n="price.3.name"></option>
+            <option data-i18n="price.4.name"></option>
+            <option data-i18n="price.5.name"></option>
+            <option data-i18n="price.6.name"></option>
+          </select>
+        </label>
+        <button class="btn btn--light" type="submit" data-i18n="form.submit"></button>
+        <p class="form__status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span data-i18n="foot.demo"></span>
+    <span>2026</span>
+  </footer>
+
+  <script src="vendor/gsap.min.js"></script>
+  <script src="vendor/ScrollTrigger.min.js"></script>
+  <script src="vendor/lenis.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
